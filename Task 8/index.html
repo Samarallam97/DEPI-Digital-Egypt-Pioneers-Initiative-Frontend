@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Enter username" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" required />
+            </div>
+
+            <div class="form-group">
+                <label><input type="checkbox" id="rememberMe" style="width: fit-content;" /> Remember Me</label>
+            </div>
+
+            <button type="submit" id="loginBtn">Login</button>
+        </form>
+    </div>
+
+    <script>
+        let loginForm = document.getElementById("loginForm");
+        let username = document.getElementById("username");
+
+        let rememberMe = document.getElementById("rememberMe");
+        let loginBtn = document.getElementById("loginBtn");
+
+        window.onload = function () {
+            let savedUsername = localStorage.getItem("username");
+            if (savedUsername) {
+                username.value = savedUsername;
+                rememberMe.checked = true;
+            }
+        };
+
+        loginForm.onsubmit = login;
+
+        function login() {
+
+            event.preventDefault();
+
+            if (this.checkValidity()) {
+
+                if (rememberMe.checked)
+                    localStorage.setItem("username", username.value);
+                else
+                    localStorage.removeItem("username");
+
+                localStorage.setItem("lastVisit", new Date().toISOString());
+                window.location.href = "profile.html";
+            }
+        }
+    </script>>
+</body>
+
+</html>

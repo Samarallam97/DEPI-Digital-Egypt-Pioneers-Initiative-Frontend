@@ -1,0 +1,13 @@
+img{
+    position: absolute;
+}
+
+.img_2{
+left :calc(50% - 100px );
+top: calc(100% - 200px ) ;
+}
+
+.img_1{
+    position: absolute;
+    left: 100;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Multiple-Choice Exam</h1>
+    <div id="warningMessage" class="warning"></div>
+
+
+    <form id="examForm">
+        
+        
+        <div class="question">
+            <h3>1. What is the capital of France?</h3>
+            <label><input type="radio" name="q1" value="a"> A) Berlin</label>
+            <label><input type="radio" name="q1" value="b"> B) Madrid</label>
+            <label><input type="radio" name="q1" value="c"> C) Paris</label>
+            <label><input type="radio" name="q1" value="d"> D) Rome</label>
+        </div>
+
+        <div class="question">
+            <h3>2. Who wrote 'To Kill a Mockingbird'?</h3>
+            <label><input type="radio" name="q2" value="a"> A) Harper Lee</label>
+            <label><input type="radio" name="q2" value="b"> B) Mark Twain</label>
+            <label><input type="radio" name="q2" value="c"> C) J.K. Rowling</label>
+            <label><input type="radio" name="q2" value="d"> D) Ernest Hemingway</label>
+        </div>
+
+        <div class="question">
+            <h3>3. What is the smallest prime number?</h3>
+            <label><input type="radio" name="q3" value="a"> A) 1</label>
+            <label><input type="radio" name="q3" value="b"> B) 2</label>
+            <label><input type="radio" name="q3" value="c"> C) 3</label>
+            <label><input type="radio" name="q3" value="d"> D) 5</label>
+        </div>
+
+        <div class="question">
+            <h3>4. What is the chemical symbol for water?</h3>
+            <label><input type="radio" name="q4" value="a"> A) O2</label>
+            <label><input type="radio" name="q4" value="b"> B) CO2</label>
+            <label><input type="radio" name="q4" value="c"> C) H2O</label>
+            <label><input type="radio" name="q4" value="d"> D) HO</label>
+        </div>
+
+        <div class="question">
+            <h3>5. Which planet is known as the Red Planet?</h3>
+            <label><input type="radio" name="q5" value="a"> A) Earth</label>
+            <label><input type="radio" name="q5" value="b"> B) Venus</label>
+            <label><input type="radio" name="q5" value="c"> C) Mars</label>
+            <label><input type="radio" name="q5" value="d"> D) Jupiter</label>
+        </div>
+
+        <button type="button" id="submit">Submit</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

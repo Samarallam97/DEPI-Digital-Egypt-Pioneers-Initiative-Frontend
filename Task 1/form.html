@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube</title>
+  <!-- icon -->
+  <link rel="shortcut icon" href="images/image.png" type="image/x-icon">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- styles file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <form action="done.html" method="get" >
+
+        <h1>Upload Your Video</h1>
+        
+        <div>
+            <h4><label for="title">Video Title</label></h4>
+            <input type="text" id="title" name="title" placeholder="Enter Your First Name" required>
+        </div>
+
+        <div>
+            <h4><label for="mail">Email Address</label></h4>
+            <input type="email" id="mail" name="mail" placeholder="Enter Your Email" required pattern="^[^@]+@[^@]+\.com$">
+        </div>
+
+        <div>
+            <h4><label for="format">Pick Your Favorite Format</label></h4>
+            <select name="format" id="format">
+                <option value="student">MP4</option>
+                <option value="employed">Mov</option>
+                <option  value="employed">WebM</option>
+            </select>
+        </div>
+
+        <div class="content">
+            <h4><label for="content">Tell Us About The Content</label></h4>
+            <textarea name="Content" id="content" placeholder="Enter Your Content" required></textarea>
+        </div>
+
+        <div class="date">
+            <h4 class="h4"><label for="date">Uploading Date</label></h4>
+            <input type="date" id="date" required></input>
+        </div>
+
+        <div class="upload">
+            <h4 ><label for="file">Upload file</label></h4>
+            <input type="file" id="file" accept="video/*" required></input>
+            <!-- <input type="file" id="file" accept="video/mp4" required> -->
+        </div>
+
+        <div>
+            <h4 >This Video for Kid?</h4>  
+            <div>
+                <input type="radio" name="status" id="yes" value="yes" checked>
+                <label for="yes">Yes</label>
+            </div>          
+            <div>
+                <input type="radio" name="status" id="no" value="no">
+                <label for="no">No</label>
+            </div>  
+        </div>
+
+        <div class="btns">
+            <input style="cursor: pointer;" type="submit" value="Submit">
+            <input style="cursor: pointer;" type="reset">
+        </div>
+        
+    </form>
+
+
+</body>
+
+</html>

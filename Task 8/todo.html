@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form action="" id="todoForm">
+        <input id="taskContent" type="text">
+        <input id="add" type="submit" value="Add Task">
+    </form>
+
+    <div id="taskes">
+
+    </div>
+    <script>
+
+        window.onload = () => {
+            let theme = localStorage.getItem('theme')
+            let fontSize = localStorage.getItem('fontSize')
+
+            document.body.classList.add(theme + '-mode');
+
+            document.body.style.fontSize = fontSize
+
+        }
+        let todoForm = document.getElementById("todoForm");
+        let taskContent = document.querySelector("#todoForm #taskContent");
+        let add = document.querySelector("#todoForm #add");
+        let taskes = document.getElementById("taskes");
+
+        if (localStorage.getItem("taskes") == null) {
+            taskes.innerHTML = ``;
+        } else {
+            taskes.innerHTML = `${localStorage.getItem("taskes")}`;
+        }
+
+        todoForm.onsubmit = function (event) {
+            event.preventDefault();
+            AddTask();
+        };
+
+
+        function AddTask() {
+
+            if (taskContent.value != "") {
+                let task = document.createElement("div");
+
+                task.innerHTML = `${taskContent.value} <button class="delete" style="background-color: #007bff; border: none; padding: 5px; color: white; border-radius: 5px; cursor:pointer; width:fit-content;" >delete</button ">`;
+
+                task.style = `  padding: 10px; display: flex; align-items: center; justify-content: space-between;`;
+
+                taskes.appendChild(task);
+
+                localStorage.setItem("taskes", taskes.innerHTML);
+
+                taskContent.value = "";
+            }
+
+            Array.from(document.getElementsByClassName("delete")).forEach(function (e) {
+
+                e.onclick = function () {
+                    e.parentElement.remove();
+                    localStorage.setItem("taskes", taskes.innerHTML);
+                };
+            });
+        }
+
+
+
+    </script>
+</body>
+
+</html>

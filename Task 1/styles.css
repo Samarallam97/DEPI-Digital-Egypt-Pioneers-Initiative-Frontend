@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* //////////////////////////////////////// */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+
+
+/* //////////////////////////////////////// */
+
+ .page {
+  min-height: 100vh;
+  display: flex;
+}
+
+aside {
+  width: 250px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 10px #ddd;
+  padding: 20px;
+}
+
+aside ul li  {
+  transition: 0.3s;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+aside ul li:hover
+{
+  background-color: #f6f6f6;
+ 
+}
+
+aside ul li a {
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  aside {
+    width: 58px;
+    padding: 5px ;
+  }
+
+  aside>h3 {
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-top: 10px;
+  }
+
+  aside>h3::before,
+  aside>h3::after {
+    display: none;
+  }
+
+  aside ul li a{
+    display: none;
+  }
+
+  aside ul li {
+    text-align: center;
+  }
+
+   .news > div div{
+    flex-direction: column;
+  }
+}
+
+/* /////////////////////////////////////////// */
+
+header{
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+}
+
+
+
+header .search input {
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 400px;
+  transition: width 0.3s;
+}
+
+header .search::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: grey;
+}
+
+header .search input:focus {
+  width: 450px;
+  outline: none;
+}
+
+header .search input:focus::placeholder {
+  opacity: 0;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+header .icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 10px;
+} 
+
+.fa-user , .fa-microphone{
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.fa-user:hover , .fa-microphone:hover{
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* ///////////////////////////////// */
+
+
+form{
+
+  background-color: #270D4C;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #ccc;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0px
+}
+
+form input:not([type="radio"]) , form select , form textarea{
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 10px;
+  padding-inline: 30px;
+  width: 80%;
+  transition: width 0.3s;
+  background-color: transparent;
+  color: #ccc;
+}
+
+form input:focus  , form textarea:focus {
+  outline: none;
+}
+
+form select:focus ,form input[type="date"]{
+  outline: none;
+  background-color: transparent;
+}
+
+
+form input::placeholder ,form textarea::placeholder{
+  color: #ccc;
+}
+
+form input[type="radio"] {
+  margin-right: 20px;
+}
+
+form input[type="submit"] {
+  margin-block: 20px;
+}
+
+form input[type="submit"] , form input[type="reset"] {
+  transition: .5s;
+}
+form input[type="submit"]:hover ,form input[type="reset"]:hover {
+  background-color: #640ED3;
+  border: none;
+}
+
+/* ///////////////////////////////////// */
+
+.icons i {
+transition: .4s;
+}
+
+.icons i:hover , #mic:hover {
+  transform: scale(1.2);
+}
+
+.nav li {
+  cursor: pointer;
+  padding: 5px;
+}
+.nav li:first-child {
+  border-bottom: 2px solid #1A0933;
+}
+
+

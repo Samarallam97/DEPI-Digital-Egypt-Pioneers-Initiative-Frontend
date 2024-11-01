@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Google Maps</title>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    
+  </head>
+  <body>
+    
+    <select id="countries">
+      <option  data-lat="26.82" data-lng="30.8">Egypt</option>
+        <option  data-lat="-25.27" data-lng="133.78">Australia</option>
+        <option  data-lat="35.86" data-lng="104.2">China</option>
+        <option  data-lat="46.23" data-lng="2.21">France</option>
+        <option  data-lat="51.17" data-lng="10.45">Germany</option>
+    </select>
+      
+    <input id="search" class="controls" type="search" placeholder="Search a country ..">
+    <div id="map"></div>
+
+
+    <script  src="./index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
